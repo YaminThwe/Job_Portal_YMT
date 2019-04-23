@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="tuhmawbi.jobportal_ymt.LoginActivity">
+    tools:context="tuhmawbi.jobportal_ymt.activities.LoginActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
     <ImageView
@@ -13,9 +14,9 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/makemoney"
@@ -41,12 +42,13 @@
         android:id="@+id/btnForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@id/view_pod_login"
-        android:layout_below="@id/view_pod_login"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
         android:text="Forgot Password?"
-        android:textColor="@color/background" />
+        android:textColor="@color/background"
+        android:layout_below="@id/view_pod_login"
+        android:layout_alignRight="@id/view_pod_login"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        />
 
     <Button
         android:id="@+id/btnLoginIn"
@@ -55,31 +57,32 @@
         android:layout_below="@id/btnForgotPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="@color/background"
         android:text="Login"
+        android:textColor="@color/white"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:background="@color/background"/>
 
     <TextView
         android:id="@+id/txtAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textColor="@color/background"
         android:layout_below="@id/btnLoginIn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:text="Don't have an account?"
-        android:textColor="@color/background"
 
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/txtAccount"
-        android:layout_marginLeft="3dp"
-        android:layout_toRightOf="@id/txtAccount"
         android:text="Sign up"
         android:textColor="@color/background"
-        android:textStyle="bold" />
+        android:layout_toRightOf="@id/txtAccount"
+        android:layout_alignBottom="@id/txtAccount"
+        android:layout_marginLeft="3dp"
+        android:textStyle="bold"
+        />
 
 </RelativeLayout>

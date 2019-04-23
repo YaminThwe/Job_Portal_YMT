@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.JobDetailsActivity">
+
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Room 3D sketch up"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvJobTitle"
+            android:layout_below="@id/tvJobTitle"
+            android:layout_marginTop="5dp"
+            android:text="category : " />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvJobTitle"
+            android:layout_toRightOf="@id/lbCategory"
+            android:background="#78909c"
+            android:padding="3dp"
+            android:text="Architect" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCompanyLogoInDetail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/lbCategory"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:src="@drawable/company_profile" />
+
+        <TextView
+            android:id="@+id/lbJobDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvJobTitle"
+            android:layout_below="@id/ivCompanyLogoInDetail"
+            android:layout_marginTop="20dp"
+            android:text="Job Description"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvJobDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbJobDescription"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal|start"
+            android:lineSpacingMultiplier="1.4"
+            android:text="Able to finish before the deadline. Able to consult about room interior and consider how the space will be used and how people will move through the space. Sketch preliminary design plans, including electrical layouts. Place orders for material and oversee installing the design elements. Specify materials and furnishings, such as lighting, furniture wall finishes and flooring" />
+
+        <ImageView
+            android:id="@+id/lbLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvJobDetail"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_location_on_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/lbLocation"
+            android:layout_below="@id/tvJobDetail"
+            android:layout_toRightOf="@id/lbLocation"
+            android:text="No(106),Thumeikta (4) Street, First Block, North Okkaplap, Yangon"
+
+            />
+
+        <ImageView
+            android:id="@+id/lbPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLocation"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_attach_money_black_30dp" />
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/lbPayment"
+            android:layout_toRightOf="@id/lbPayment"
+            android:text="Negotiate(MMK)" />
+
+        <ImageView
+            android:id="@+id/lbTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbPayment"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_alarm_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/lbTime"
+            android:layout_below="@id/lbPayment"
+            android:layout_toRightOf="@id/lbTime"
+            android:text="9:00 AM - 5:00 PM" />
+
+        <ImageView
+            android:id="@+id/lbWebLink"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/lbTime"
+            android:layout_margin="10dp"
+            android:src="@drawable/weblink" />
+
+        <TextView
+            android:id="@+id/tvWebLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/lbWebLink"
+            android:layout_below="@id/tvTime"
+            android:layout_toRightOf="@id/lbWebLink"
+            android:text="https://www.chatesat.com" />
+
+        <TextView
+            android:id="@+id/tvImportantNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lbWebLink"
+            android:layout_below="@id/tvWebLink"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Please take CV"
+            android:textColor="@color/orange" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvImportantNote"
+            android:background="@color/white"
+            android:weightSum="3">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Like"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Apply"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Favourite"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

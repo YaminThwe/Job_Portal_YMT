@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JobPortal_YMT</string>
+    <string name="title_activity_company_real_profile">CompanyRealProfileActivity</string>
 </resources>
