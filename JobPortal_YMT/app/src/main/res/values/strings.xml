@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">JobPortal_YMT</string>
     <string name="title_activity_company_real_profile">CompanyRealProfileActivity</string>
+
+    <string-array name="job_type">
+        <item>Part Time</item>
+        <item>Full Time</item>
+        <item>Freelancer</item>
+        <item>Volunteer</item>
+        <item>Fresh Graduate</item>
+    </string-array>
+
+    <string name="facebook_app_id">1042188465987273</string>
+    <string name="title_activity_main">MainActivity</string>
+
+
 </resources>

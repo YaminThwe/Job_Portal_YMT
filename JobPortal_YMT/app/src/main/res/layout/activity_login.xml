@@ -4,85 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context="tuhmawbi.jobportal_ymt.activities.LoginActivity"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:background="#FFFFFF"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tuhmawbi.jobportal_ymt.activities.LoginActivity">
 
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/logo"
-        android:layout_marginTop="10dp"/>
+        android:src="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/makemoney"
-        android:layout_width="wrap_content"
+
+    <Button
+        android:id="@+id/btnLoginWithPhone"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"
-        android:fontFamily="monospace"
-        android:text="Let's Make Money!!!"
-        android:textColor="@color/orange"
-        android:textSize="20sp" />
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/background"
+        android:drawableLeft="@drawable/ic_call_white_24dp"
+        android:padding="20dp"
+        android:text="Sign in with Phone number"
+        android:textAllCaps="false"
+        android:textSize="18sp"
 
-    <include
-        android:id="@+id/view_pod_login"
-        layout="@layout/activity_view_pod_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/makemoney"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
-
-    <TextView
-        android:id="@+id/btnForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:textColor="@color/background"
-        android:layout_below="@id/view_pod_login"
-        android:layout_alignRight="@id/view_pod_login"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
         />
 
     <Button
-        android:id="@+id/btnLoginIn"
-        android:layout_width="150dp"
+        android:id="@+id/btnLoginWithFB"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnForgotPassword"
+        android:layout_below="@id/btnLoginWithPhone"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Login"
-        android:textColor="@color/white"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/background"
+        android:drawableLeft="@drawable/facebooklogo"
+        android:padding="20dp"
+        android:text="Sign in with Facebook"
         android:textAllCaps="false"
-        android:background="@color/background"/>
+        android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/txtAccount"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnLoginWithGoogle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have an account?"
-        android:textColor="@color/background"
-        android:layout_below="@id/btnLoginIn"
+        android:layout_below="@id/btnLoginWithFB"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/background"
+        android:drawableLeft="@drawable/google_logo"
+        android:padding="20dp"
+        android:text="Sign in with Google"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
 
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
-        android:textColor="@color/background"
-        android:layout_toRightOf="@id/txtAccount"
-        android:layout_alignBottom="@id/txtAccount"
-        android:layout_marginLeft="3dp"
-        android:textStyle="bold"
-        />
 
 </RelativeLayout>

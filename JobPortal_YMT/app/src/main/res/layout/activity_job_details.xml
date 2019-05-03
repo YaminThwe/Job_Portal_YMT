@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,6 +21,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Room 3D sketch up"
+            android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -31,7 +32,8 @@
             android:layout_alignLeft="@id/tvJobTitle"
             android:layout_below="@id/tvJobTitle"
             android:layout_marginTop="5dp"
-            android:text="category : " />
+            android:text="category : "
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tvCategory"
@@ -61,6 +63,7 @@
             android:layout_below="@id/ivCompanyLogoInDetail"
             android:layout_marginTop="20dp"
             android:text="Job Description"
+            android:textColor="@color/background"
             android:textSize="20sp" />
 
         <TextView
@@ -74,7 +77,8 @@
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal|start"
             android:lineSpacingMultiplier="1.4"
-            android:text="Able to finish before the deadline. Able to consult about room interior and consider how the space will be used and how people will move through the space. Sketch preliminary design plans, including electrical layouts. Place orders for material and oversee installing the design elements. Specify materials and furnishings, such as lighting, furniture wall finishes and flooring" />
+            android:text="Able to finish before the deadline. Able to consult about room interior and consider how the space will be used and how people will move through the space. Sketch preliminary design plans, including electrical layouts. Place orders for material and oversee installing the design elements. Specify materials and furnishings, such as lighting, furniture wall finishes and flooring"
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/lbLocation"
@@ -92,8 +96,7 @@
             android:layout_below="@id/tvJobDetail"
             android:layout_toRightOf="@id/lbLocation"
             android:text="No(106),Thumeikta (4) Street, First Block, North Okkaplap, Yangon"
-
-            />
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/lbPayment"
@@ -109,7 +112,8 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/lbPayment"
             android:layout_toRightOf="@id/lbPayment"
-            android:text="Negotiate(MMK)" />
+            android:text="Negotiate(MMK)"
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/lbTime"
@@ -126,7 +130,8 @@
             android:layout_alignTop="@id/lbTime"
             android:layout_below="@id/lbPayment"
             android:layout_toRightOf="@id/lbTime"
-            android:text="9:00 AM - 5:00 PM" />
+            android:text="9:00 AM - 5:00 PM"
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/lbWebLink"
@@ -143,7 +148,8 @@
             android:layout_alignTop="@id/lbWebLink"
             android:layout_below="@id/tvTime"
             android:layout_toRightOf="@id/lbWebLink"
-            android:text="https://www.chatesat.com" />
+            android:text="https://www.chatesat.com"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tvImportantNote"
@@ -164,29 +170,32 @@
             android:weightSum="3">
 
             <Button
+                android:id="@+id/btnLikeInDetail"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/rounded_button"
+                android:background="@color/background"
                 android:text="Like"
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/btnApplyInDetail"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/rounded_button"
+                android:background="@color/background"
                 android:text="Apply"
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/btnFavouriteInDetail"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/rounded_button"
+                android:background="@color/background"
                 android:text="Favourite"
                 android:textAllCaps="false" />
 

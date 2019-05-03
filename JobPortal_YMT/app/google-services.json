@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "199563812794",
+    "firebase_url": "https://jobprotal-ymt.firebaseio.com",
+    "project_id": "jobprotal-ymt",
+    "storage_bucket": "jobprotal-ymt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199563812794:android:53b063720096ec22",
+        "android_client_info": {
+          "package_name": "tuhmawbi.jobportal_ymt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199563812794-l502dvpedsoe8cblordlli1cfoskk1ni.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tuhmawbi.jobportal_ymt",
+            "certificate_hash": "caacd34e8f298d41ab684313b7ba42849bfb8e5c"
+          }
+        },
+        {
+          "client_id": "199563812794-5ogtvqrae9a18n15gkb84t79c0j3mjqh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT325KR-v2a6MMd504v-8LyL6aiHpduoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199563812794-5ogtvqrae9a18n15gkb84t79c0j3mjqh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,196 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardElevation="15dp">
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:background="@color/white">
 
-                <RelativeLayout
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="To Teach English"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lbPostedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tvTitle"
+                    android:layout_below="@id/tvTitle"
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    android:text="posted Date: "
+                    android:textColor="@color/background" />
+
+                <TextView
+                    android:id="@+id/tvPostedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/lbPostedDate"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/lbPostedDate"
+                    android:text="19.3.2017"
+                    android:textColor="@color/background" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/company_profile"
+                    android:layout_marginRight="50dp"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tvPostedDate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivLocation"
+                    android:layout_toRightOf="@id/ivLocation"
+                    android:text="North Okkalapa"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivMoney"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignLeft="@id/ivLocation"
+                    android:layout_below="@id/tvPlace"
+                    android:src="@drawable/ic_attach_money_black_48dp" />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tvPlace"
+                    android:layout_alignTop="@id/ivMoney"
+                    android:layout_below="@id/tvPlace"
+                    android:text="3000"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivMoney"
+                    android:layout_below="@id/tvPlace"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tvAmount"
+                    android:text="per month"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:id="@+id/tvTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="To Teach English"
-                        android:textSize="25dp"
-                        android:textColor="@color/background"/>
-
-                    <TextView
-                        android:id="@+id/tvPostedDate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/tvTitle"
-                        android:layout_below="@id/tvTitle"
-                        android:layout_marginBottom="@dimen/fab_margin"
-                        android:text="posted Date: "
-                        android:textColor="@color/orange"/>
+                    android:layout_below="@id/tvDuration"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/tvPostedDate"
-                        android:layout_alignBottom="@id/tvPostedDate"
-                        android:layout_marginLeft="5dp"
-                        android:text="19.3.2017"
-                        android:textColor="@color/orange"
-                        />
-
-                </RelativeLayout>
-
-                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/background">
+                        android:layout_marginLeft="35dp"
+                        android:text="Male - "
+                        android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/tvShortDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/fab_margin"
-                        android:text="To teach English Speaking"
-                        android:textSize="20dp" />
-
-                    <ImageView
-                        android:id="@+id/ivLocation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvShortDescription"
-                        android:layout_marginLeft="@dimen/fab_margin"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_location_on_black_24dp" />
+                        android:text="3"
+                        android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/tvPlace"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@id/ivLocation"
-                        android:layout_below="@id/tvShortDescription"
-                        android:text="North Okkalapa"
-                        android:textColor="@color/white"
-                        android:textSize="15dp"
-                        android:layout_toRightOf="@id/ivLocation" />
-
-                    <ImageView
-                        android:id="@+id/ivMoney"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/ivLocation"
-                        android:layout_below="@id/tvPlace"
-                        android:src="@drawable/ic_attach_money_black_48dp" />
+                        android:layout_marginLeft="25dp"
+                        android:text="Female - "
+                        android:textColor="@color/black" />
 
                     <TextView
-                        android:id="@+id/tvAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/tvPlace"
-                        android:layout_alignTop="@id/ivMoney"
-                        android:layout_below="@id/tvPlace"
-                        android:text="3000"
-                        android:textColor="@color/white"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:id="@+id/tvDuration"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@id/ivMoney"
-                        android:layout_below="@id/tvPlace"
-                        android:layout_marginLeft="5dp"
-                        android:text="per month"
-                        android:textColor="@color/white"
-                        android:layout_toRightOf="@id/tvAmount" />
-
-                    <TextView
-                        android:id="@+id/tvViewedInDetail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvDuration"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="13dp"
-                        android:layout_marginTop="10dp"
-                        android:clickable="true"
-                        android:text="3 viewed - "
-                        android:textColor="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tvInterestedInDetail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@id/tvViewedInDetail"
-                        android:clickable="true"
-                        android:text="4 interested - "
-                        android:textColor="@color/white"
-                        android:layout_toRightOf="@id/tvViewedInDetail" />
+                        android:text="2"
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/tvAppliedInDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@id/tvInterestedInDetail"
-                        android:layout_toRightOf="@id/tvInterestedInDetail"
+                        android:layout_marginLeft="40dp"
                         android:clickable="true"
                         android:text="3 applied"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/black" />
 
+                </LinearLayout>
 
-                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout"
+                    android:layout_marginBottom="5dp"
                     android:background="@color/white"
                     android:weightSum="3">
 
                     <Button
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Like"
-                        android:textAllCaps="false"
-                        android:background="@drawable/rounded_button"
-                        android:layout_margin="5dp"/>
-
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Apply"
-                        android:background="@drawable/rounded_button"
-                        android:textAllCaps="false"
-                        android:layout_margin="5dp"/>
-
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Favourite"
-                        android:textAllCaps="false"
-                        android:background="@drawable/rounded_button"
+                        android:layout_height="30dp"
                         android:layout_margin="5dp"
-                        />
+                        android:layout_weight="1"
+                        android:background="@color/background"
+                        android:text="Interest"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/background"
+                        android:text="Apply"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/background"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
-            </LinearLayout>
+
+            </RelativeLayout>
 
 
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
 
-    </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
 
