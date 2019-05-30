@@ -1,9 +1,19 @@
-package tuhmawbi.jobportal_ymt;
+package tuhmawbi.jobportal_ymt.activities;
 
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v7.widget.CardView;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
-public class MainActivity extends Activity {
+
+
+import tuhmawbi.jobportal_ymt.R;
+
+public class MainActivity extends AppCompatActivity {
+
 
 
     @Override
@@ -12,7 +22,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
+
     }
-
-
 }

@@ -1,73 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="tuhmawbi.jobportal_ymt.activities.LoginActivity">
+    android:background="#f5f5f5"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo" />
-
-
-    <Button
-        android:id="@+id/btnLoginWithPhone"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/background"
-        android:drawableLeft="@drawable/ic_call_white_24dp"
-        android:padding="20dp"
-        android:text="Sign in with Phone number"
-        android:textAllCaps="false"
-        android:textSize="18sp"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".LoginActivity">
 
-        />
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/primary_dark"
+            android:gravity="center">
 
-    <Button
-        android:id="@+id/btnLoginWithFB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnLoginWithPhone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/background"
-        android:drawableLeft="@drawable/facebooklogo"
-        android:padding="20dp"
-        android:text="Sign in with Facebook"
-        android:textAllCaps="false"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/jobPortal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/fab_transformation_scrim_behavior"
+                android:text="Job Portal"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnLoginWithGoogle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnLoginWithFB"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/background"
-        android:drawableLeft="@drawable/google_logo"
-        android:padding="20dp"
-        android:text="Sign in with Google"
-        android:textAllCaps="false"
-        android:textSize="18sp" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayout"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-60dp"
+            android:layout_marginRight="25dp"
+            android:background="#f5f5f5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin3"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:textColorHint="@color/primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary"
+                        android:hint="Email"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/primary_text"
+                        android:textColorHint="@color/primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_email"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin3"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:textColorHint="@color/primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary"
+                        android:hint="Password"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/primary_text"
+                        android:textColorHint="@color/design_default_color_primary" />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-</RelativeLayout>
+                <Button
+                    android:id="@+id/btn_singIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_password"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1"
+                    android:background="@color/accent"
+                    android:backgroundTint="@android:color/white"
+                    android:drawableEnd="@drawable/ic_chevron_right_white_24dp"
+                    android:elevation="3dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Sign In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_singIn"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin2"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin2"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_weight="1.25"
+                        android:background="@color/divider" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="OR"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0.5dp"
+                        android:layout_weight="1.25"
+                        android:background="@color/divider" />
+
+
+                </LinearLayout>
+
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/btnFBLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/tvCreateAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnFBLogin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="32dp"
+                    android:text="Create New Account"
+                    android:textColor="@color/primary_dark" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

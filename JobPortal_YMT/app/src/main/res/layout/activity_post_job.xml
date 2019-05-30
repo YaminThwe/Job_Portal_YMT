@@ -1,282 +1,404 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:background="@color/primary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".activities.PostJobActivity">
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
 
-        <android.support.design.widget.AppBarLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/backdrop_tool"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_dark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="@drawable/ic_menu_white_24dp"
+            app:title="Post Job"
+            app:titleTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/background"
-                app:title="Post Job"
-                app:titleTextColor="@color/white" />
-
-        </android.support.design.widget.AppBarLayout>
-
+    <ScrollView
+        android:id="@+id/container8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:ignore="PrivateResource">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:background="@color/white"
-            android:elevation="3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/image_border"
-                android:elevation="5dp"
-                android:padding="25dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_image_black_24dp" />
-
-
-            <android.support.design.widget.TextInputEditText
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rounded_border_edittext"
-                android:hint="Enter Job Title*"
-                android:padding="10dp"
-                android:textColor="@color/background"
-                android:textColorHint="@color/texthintcolor" />
+                android:gravity="center_horizontal">
 
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rounded_border_edittext"
-                android:hint="Enter Company Name *"
-                android:padding="10dp"
-                android:textColor="@color/background"
-                android:textColorHint="@color/texthintcolor" />
-
-            <Spinner
-                android:id="@+id/spinner_job_category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/background"
-                android:elevation="3dp"
-                android:padding="10dp"
-                android:popupBackground="@color/white" />
-
-            <Spinner
-                android:id="@+id/spinner_job_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/background"
-                android:elevation="3dp"
-                android:padding="10dp"
-                android:popupBackground="@color/white" />
-
-            <Button
-                android:id="@+id/btnexpand1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@color/white"
-                android:drawableRight="@drawable/arrow_down"
-                android:elevation="5dp"
-                android:paddingLeft="5dp"
-                android:text="Fill Job in Detail"
-                android:textAllCaps="false"
-                android:textColor="@color/background" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/expandable1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/coordinator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:orientation="vertical">
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/rounded_border_edittext"
-                        android:gravity="center"
-                        android:hint="Male"
-                        android:inputType="number"
-                        android:padding="10dp"
-                        android:textColor="@color/background"
-                        android:textColorHint="@color/texthintcolor" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/prof_image2"
+                        android:layout_width="100dp"
+                        android:layout_height="125dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/add_photo" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="0dp"
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="300dp"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/coordinator"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:background="@drawable/btn_corner_snap"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/rounded_border_edittext"
-                        android:gravity="center"
-                        android:hint="Female"
-                        android:inputType="number"
-                        android:padding="10dp"
-                        android:textColor="@color/background"
-                        android:textColorHint="@color/texthintcolor" />
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Company Name"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCompanyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_work_black_24dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Job Title"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etJobTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Job Detail"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etJobDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Experience"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etExperience"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Position Requirement"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPositionRequirement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Salary"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSalary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Location"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Benefits"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBenefits"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Opportunities"
+                        app:boxStrokeColor="@color/primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etOpportunities"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_job_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:outlineSpotShadowColor="@color/primary_dark" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_job_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_marginBottom="20dp">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/chkMale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:layout_weight="1"/>
+
+                        <EditText
+                            android:id="@+id/etMale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/chkFemale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:layout_weight="1"/>
+
+                        <EditText
+                            android:id="@+id/etFemale"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="gone"/>
+
+
+
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
-                <android.support.design.widget.TextInputEditText
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardMaxElevation="10dp"
+                app:cardElevation="32dp">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Enter Location"
-                    android:inputType="textLongMessage"
-                    android:padding="10dp"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Job Owner Contact"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="8dp"
+                            android:hint="Name">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmployerName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/ic_person_outline_black_24dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="8dp"
+                            android:hint="Email">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmployerEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/ic_email_black_24dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="25dp"
+                            android:hint="Phone Number">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmployerPhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/ic_call_black_24dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
 
 
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Enter Contact no."
-                    android:inputType="textLongMessage"
-                    android:padding="10dp"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
+                    </LinearLayout>
 
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Enter website link"
-                    android:inputType="textLongMessage"
-                    android:padding="10dp"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/descriptionEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Enter Job Description"
-                    android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
-                    android:maxLines="6"
-                    android:minLines="3"
-                    android:paddingLeft="10dp"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
+                </RelativeLayout>
 
 
-            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
 
             <Button
-                android:id="@+id/btnExpand2"
+                android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:drawableRight="@drawable/arrow_down"
-                android:text="What we can offer"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/accent"
+                android:backgroundTint="@android:color/white"
+                android:elevation="3dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text=" Submit "
                 android:textAllCaps="false"
-                android:textColor="@color/background" />
-
-            <LinearLayout
-                android:id="@+id/expandable2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Enter Salary*"
-                    android:padding="10dp"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
-
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Benefits"
-                    android:padding="10dp"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
-
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/rounded_border_edittext"
-                    android:hint="Career Opportunities"
-                    android:padding="10dp"
-                    android:textColor="@color/background"
-                    android:textColorHint="@color/texthintcolor" />
-
-            </LinearLayout>
-
+                android:textColor="@color/primary_dark"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
 
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+
+</LinearLayout>

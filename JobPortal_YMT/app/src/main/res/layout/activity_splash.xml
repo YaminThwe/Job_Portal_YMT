@@ -5,24 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:gravity="center"
     tools:context=".activities.SplashActivity">
 
 
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/logo"
-        android:layout_centerInParent="true" />
+    <com.github.florent37.shapeofview.shapes.CircleView
+        android:id="@+id/circle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        app:shape_circle_borderWidth="2dp">
+
+        <ImageView
+            android:id="@+id/logo_entry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+    </com.github.florent37.shapeofview.shapes.CircleView>
+
 
     <TextView
         android:id="@+id/tvMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's Make Money !!"
-        android:textColor="@color/background"
-        android:layout_below="@id/ivLogo"
+        android:layout_below="@id/circle"
         android:layout_centerHorizontal="true"
+        android:text="Let's Make Money !!"
+        android:textColor="@color/primary_dark"
         android:textSize="20dp" />
 
     <ProgressBar
@@ -30,9 +42,10 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/tvMoney"
-        android:layout_marginTop="10dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:outlineAmbientShadowColor="@color/primary_dark" />
 
 
 </RelativeLayout>
